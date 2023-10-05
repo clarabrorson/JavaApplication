@@ -32,13 +32,30 @@ public class DataManager {
     /**
      * This method takes user input to create a JSON object and sends it to a web API endpoint.
      */
+
     public static void userInputForKafka() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Name your favorite book: ");
-        System.out.print("ID: ");
-        long id = scanner.nextLong();
-        scanner.nextLine();
+
+        long id = 0;
+        boolean validInput = false;
+
+        while (!validInput) {
+            try {
+                System.out.print("ID: ");
+                String input = scanner.nextLine();
+                id = Long.parseLong(input);
+
+                if (id > 0) {
+                    validInput = true;
+                } else {
+                    System.out.println("ID must be a positive integer. Please try again.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid input.");
+            }
+        }
 
         System.out.print("Title: ");
         String title = scanner.nextLine();
@@ -54,6 +71,7 @@ public class DataManager {
         myObj.put("title", title);
         myObj.put("author", author);
         myObj.put("genre", genre);
+
         try {
             DataManager.sendToWebAPI(myObj);
         } catch (Exception e) {
@@ -84,12 +102,15 @@ public class DataManager {
                     returnResp = responseString;
                 }
             } catch (ParseException e) {
+                System.err.println("Error parsing the response from the web API: " + e.getMessage());
                 throw new RuntimeException(e);
             }
-        } catch (IOException e) { e.printStackTrace(); }
+        } catch (IOException e) {
+            System.err.println("Error creating HTTP client or executing request: " + e.getMessage());
+            e.printStackTrace(); // Skriv ut stackspåret för IOException
+        }
         return returnResp;
     }
-
     /**
      * Retrieves a list of books from a Kafka topic.
      *

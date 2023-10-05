@@ -23,67 +23,38 @@ public class Menu {
         String choice = "";
         Scanner scan = new Scanner(System.in);
 
-        do {
-            printMenu();
-            System.out.print("Please select an option from the menu: ");
-            choice = scan.nextLine();
+        try {
+            do {
+                printMenu();
+                System.out.print("Please select an option from the menu: ");
+                choice = scan.nextLine();
 
-            switch (choice) {
-                case "1" -> {
-                    try {
-                        userInputForKafka();
-                    } catch (Exception e) {
-                        System.out.println("An error occurred: " + e.getMessage());
+                switch (choice) {
+                    case "1" -> {
+                        try {
+                            userInputForKafka();
+                        } catch (Exception e) {
+                            System.out.println("An error occurred: " + e.getMessage());
+                        }
                     }
-                }
-                case "2" -> {
-                    try {
-                        getDataFromKafka("bookTopic_json");
-                    } catch (Exception e) {
-                        System.out.println("An error occurred: " + e.getMessage());
+                    case "2" -> {
+                        try {
+                            getDataFromKafka("bookTopic_json");
+                        } catch (Exception e) {
+                            System.out.println("An error occurred: " + e.getMessage());
+                        }
                     }
+                    case "0" -> System.out.println("Thank you for using the application!");
                 }
-                case "0" -> System.out.println("Thank you for using the application!");
-                default -> System.out.println("Invalid input. Please select a valid option (1, 2, or 0).");
-            }
 
-            if (!choice.equals("0")) {
-                System.out.println("Press enter to continue...");
-                scan.nextLine();
-            }
+                if (!choice.equals("0")) {
+                    System.out.println("Press enter to continue...");
+                    scan.nextLine();
+                }
 
-        } while (!choice.equals("0"));
-
-        scan.close();
+            } while (!choice.equals("0"));
+        } finally {
+            scan.close();
+        }
     }
-
-    /*public static void userMenu() {
-
-        String choice = "";
-        Scanner scan = new Scanner(System.in);
-        do {
-            printMenu();
-
-
-            System.out.print("Please select an option from the menu: ");
-            choice = scan.nextLine();
-
-            switch (choice) {
-                case "1" -> userInputForKafka();
-                case "2" -> getDataFromKafka("bookTopic_json");
-                case "0" -> System.out.println("Thank you for using the application!");
-                default -> System.out.println("Invalid input. Please try again");
-            }
-
-            if (!choice.equals("0")) {
-                System.out.println("Press enter to continue...");
-                scan.nextLine();
-            }
-
-        } while (choice.equals("0"));
-
-        scan.close();
-    } */
-
-
 }
