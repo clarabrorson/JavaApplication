@@ -16,7 +16,8 @@ The project also gave me valuable experience in using Apache Kafka to facilitate
 + Download and install [Apache Kafka](https://kafka.apache.org/downloads)
 + Clone the project on GitHub and open it in IntelliJ.
 + Make sure that the kafka zookeeper and kafka server is running in terminal.
-+ Make sure that the MySQL server is running.
++ Create a database in MySQL with the name "bookstore" 
++ Change the username and password in the application.properties file in the KafkaWebService module to your own username and password.
 + Launch Spring Boot from the SpringBootWebApplication class i KafkaWebService module.
 + Launch the program from the Main class in the JavaApplication module.
 + The program will start with a menu system where the user can choose between sending and receiving data.
@@ -44,6 +45,7 @@ The project also gave me valuable experience in using Apache Kafka to facilitate
 + Junit Jupiter API 5.10.0
 
 ## License
+MIT License
 
 ## Tests
 #### KafkaWebService
