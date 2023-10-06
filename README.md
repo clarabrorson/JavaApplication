@@ -2,7 +2,7 @@
 
 ## Description
 This multi-project is a part of the course System Integration at Campus Mölndal. The project is a webservice that is built with Java and Spring Boot. The webservice is connected to a MySQL database and can handle CRUD operations. 
-The webservice is a part of a larger project that is built with a microservice architecture, with Apache kafka facilitating communication between the services. The webservice is responsible for handling the user data.
+The webservice is a part of a larger project that is built with a microservice architecture, with Apache kafka facilitating communication between the services.
 
 My motivation behind building the project was to gain practical experience in system integration and microservice architecture. The project gave me valuable experience in building a webservice and connecting it to a database.
 The project also gave me valuable experience in using Apache Kafka to facilitate communication between services, and enhanced my Java and Spring Boot skills.
@@ -44,6 +44,8 @@ The project also gave me valuable experience in using Apache Kafka to facilitate
 + Http Client 5.2.1
 + Springboot-kafka-web-service 0.0.1-SNAPSHOT
 + Junit Jupiter API 5.10.0
++ slf4j-simple 2.0.9
++ slf4j-api 2.0.9
 
 ## License
 MIT License
