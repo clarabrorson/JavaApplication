@@ -14,9 +14,10 @@ The project also gave me valuable experience in using Apache Kafka to facilitate
 + Download and install [IntelliJ](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 + Download and install [MySQL](https://dev.mysql.com/downloads/mysql/)
 + Download and install [Apache Kafka](https://kafka.apache.org/downloads)
-+ Clone the project on GitHub and open it in IntelliJ.
++ Clone the projects on GitHub [JavaApplication](https://github.com/clarabrorson/JavaApplication) and [KafkaWebService](https://github.com/clarabrorson/KafkaWebService)
 + Make sure that the kafka zookeeper and kafka server is running in terminal.
 + Create a database in MySQL with the name "bookstore" 
++ Open JavaApplication in your IDE (if necessary add KafkaWebService as a Module from excisting source)
 + Change the username and password in the application.properties file in the KafkaWebService module to your own username and password.
 + Launch Spring Boot from the SpringBootWebApplication class i KafkaWebService module.
 + Launch the program from the Main class in the JavaApplication module.
