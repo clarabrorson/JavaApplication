@@ -1,7 +1,7 @@
 # Project Webservice 
 
 ## Description
-This project is a part of the course System Integration at Campus Mölndal. The project is a webservice that is built with Java and Spring Boot. The webservice is connected to a MySQL database and can handle CRUD operations. 
+This multi-project is a part of the course System Integration at Campus Mölndal. The project is a webservice that is built with Java and Spring Boot. The webservice is connected to a MySQL database and can handle CRUD operations. 
 The webservice is a part of a larger project that is built with a microservice architecture, with Apache kafka facilitating communication between the services. The webservice is responsible for handling the user data.
 
 My motivation behind building the project was to gain practical experience in system integration and microservice architecture. The project gave me valuable experience in building a webservice and connecting it to a database.

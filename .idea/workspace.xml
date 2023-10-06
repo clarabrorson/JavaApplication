@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="760a5344-1d5e-4b88-83c7-1457450ea63e" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/../KafkaWebService/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaConsumerDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaConsumerDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,21 +90,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaApplication" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="KafkaTests" />
+    <configuration name="DatabaseTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-kafka-webservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="springboot.kafka.webservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="springboot.kafka.webservice" />
+      <option name="MAIN_CLASS_NAME" value="springboot.kafka.webservice.DatabaseTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KafkaTests.getDataFromKafkaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KafkaTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaApplication" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="KafkaTests" />
-      <option name="METHOD_NAME" value="getDataFromKafkaTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,8 +128,8 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.SpringbootKafkaWebserviceApplication" />
+        <item itemvalue="JUnit.DatabaseTests" />
         <item itemvalue="JUnit.KafkaTests" />
-        <item itemvalue="JUnit.KafkaTests.getDataFromKafkaTest" />
         <item itemvalue="JUnit.KafkaTests.sendToWebAPITest" />
       </list>
     </recent_temporary>
