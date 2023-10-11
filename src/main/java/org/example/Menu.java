@@ -1,10 +1,14 @@
 package org.example;
 
 import java.util.Scanner;
+import static org.example.KafkaDataFetcher.getDataFromKafka;
+import static org.example.UserInputManager.userInputForKafka;
 
-import static org.example.DataManager.getDataFromKafka;
-import static org.example.DataManager.userInputForKafka;
-
+/*
+ * This class is responsible for printing the menu and getting the user's choice.
+ * It also calls the methods from the UserInputManager and KafkaDataFetcher classes.
+ * The userMenu() method includes try catch blocks to handle exceptions, and a finally block to close the Scanner object.
+ */
 public class Menu {
 
     public static void printMenu() {

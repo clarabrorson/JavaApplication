@@ -1,4 +1,6 @@
-import org.example.DataManager;
+
+import org.example.KafkaDataFetcher;
+import org.example.WebAPIClient;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.*;
@@ -16,6 +18,7 @@ import java.util.ArrayList;
  * The methods being tested are:
  * - sendToWebAPI
  * - getDataFromKafka
+ * The test for getDataFromKafka is set with a Thread.sleep() to make sure that the test is not run before the data is sent to Kafka
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class KafkaTests {
@@ -35,7 +38,7 @@ public class KafkaTests {
     @Test
     public void sendToWebAPITest() {
 
-        String sendResponse = DataManager.sendToWebAPI(sharedJsonObj);
+        String sendResponse = WebAPIClient.sendToWebAPI(sharedJsonObj);
         assertEquals("Json message sent to kafka topic", sendResponse);
     }
 
@@ -43,8 +46,13 @@ public class KafkaTests {
     @Test
     public void getDataFromKafkaTest() {
 
-        ArrayList<Book> books = DataManager.getDataFromKafka(KAFKA_TOPIC_NAME);
+        ArrayList<Book> books = KafkaDataFetcher.getDataFromKafka(KAFKA_TOPIC_NAME);
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
             Book testBook = books.get(books.size() - 1);
 
             assertEquals(sharedJsonObj.get("id"), testBook.getId());
@@ -53,49 +61,6 @@ public class KafkaTests {
             assertEquals(sharedJsonObj.get("genre"), testBook.getGenre());
         }
     }
-
-    /*@Test
-    public void sendToWebAPITest() {
-
-        JSONObject myObj = new JSONObject();
-        myObj.put("id", 250L);
-        myObj.put("title", "NewestTestTitle");
-        myObj.put("author", "NewestTestAuthor");
-        myObj.put("genre", "NewestTestGenre");
-
-        //Anropa metod för att skcika den
-        String resp = DataManager.sendToWebAPI(myObj);
-
-        //Jämföra response-värden
-        assertEquals(resp, "Json message sent to kafka topic");
-    }
-
-    @Test
-    public void getDataFromKafkaTest() {
-        // Skapa ett test-Book-objekt med värden
-        Book book = new Book();
-        book.setId(250L);
-        book.setTitle("NewestTestTitle");
-        book.setAuthor("NewestTestAuthor");
-        book.setGenre("NewestTestGenre");
-
-        // Anropa metod för att hämta böcker från Kafka
-        ArrayList<Book> books = DataManager.getDataFromKafka("bookTopic_json");
-
-        // Kontrollera att det finns minst en bok
-        if (!books.isEmpty()) {
-            Book testBook = books.get(books.size() - 1);
-
-            // Jämför egenskaper med det skapade test-Book-objektet
-            assertEquals(testBook.getId(), book.getId());
-            assertEquals(testBook.getTitle(), book.getTitle());
-            assertEquals(testBook.getAuthor(), book.getAuthor());
-            assertEquals(testBook.getGenre(), book.getGenre());
-        } else {
-            // Om det inte finns några böcker, kan du hantera detta här
-            System.out.println("No books found");
-        }
-    }*/
 
 
 
