@@ -10,12 +10,11 @@ import org.apache.hc.core5.http.ParseException;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
 import org.apache.hc.core5.http.io.entity.StringEntity;
 import org.json.simple.JSONObject;
-
 import java.io.IOException;
-/*
- * This class is used to send the book data to the web API
- * The method includes try catch blocks to handle exceptions that may occur
- */
+/**
+  * This class is used to send the book data to the web API and Kafka server
+  * The method includes try catch blocks to handle exceptions that may occur
+  */
 public class WebAPIClient {
 
     public static String sendToWebAPI(JSONObject myObj) {

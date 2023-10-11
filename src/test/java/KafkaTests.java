@@ -18,6 +18,7 @@ import java.util.ArrayList;
  * The methods being tested are:
  * - sendToWebAPI
  * - getDataFromKafka
+ * The test cases are executed in the order specified by the @Order annotation
  * The test for getDataFromKafka is set with a Thread.sleep() to make sure that the test is not run before the data is sent to Kafka
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

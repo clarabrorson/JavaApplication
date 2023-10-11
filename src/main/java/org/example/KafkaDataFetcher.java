@@ -6,16 +6,15 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.kafka.support.serializer.ErrorHandlingDeserializer;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import springboot.kafka.webservice.payload.Book;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Properties;
-/*
- * This class is responsible for fetching data from Kafka.
- * The method getDataFromKafka() fetches data from Kafka and returns an ArrayList of books.
- * The method includes a if statement that checks if the book is null or not.
- */
+/**
+  * This class is responsible for fetching data from Kafka.
+  * The method getDataFromKafka() fetches data from Kafka and returns an ArrayList of books.
+  * The method includes a if statement that checks if the book is null or not.
+  */
 public class KafkaDataFetcher {
     public static ArrayList<Book> getDataFromKafka(String topicName) {
         Properties props = new Properties();

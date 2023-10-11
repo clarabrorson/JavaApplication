@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="760a5344-1d5e-4b88-83c7-1457450ea63e" name="Changes" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KafkaWebService/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaWebService/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaDataFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaDataFetcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WebAPIClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WebAPIClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/KafkaTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/KafkaTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/controller/JsonMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/controller/JsonMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaConsumerDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaConsumerDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KafkaWebService/src/main/java/springboot/kafka/webservice/kafka/JsonKafkaProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +69,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KafkaTests">
+  <component name="RunManager" selected="JUnit.DatabaseTests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="JavaApplication" />
@@ -125,10 +132,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DatabaseTests" />
         <item itemvalue="JUnit.KafkaTests" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.SpringbootKafkaWebserviceApplication" />
-        <item itemvalue="JUnit.DatabaseTests" />
         <item itemvalue="JUnit.KafkaTests.sendToWebAPITest" />
       </list>
     </recent_temporary>
